@@ -459,7 +459,7 @@
                       - All attributes and its values must be in camel case (fontSize) 
                   - In JSX, attribute like class is 'className' and instead of for use 'htmlFor'
                   - We can use js code directly in JSX, provide js code inside { js code }
-            - Babel : used to convert jsx to html      
+            - Babel : used to convert jsx to html (compiler)    
         4. React Project Creation : using vite  
            - npm create vite@latest Project-name -- --template react
            - To run react app using vite : npm run dev, generally we can view the output in localhost:5173
@@ -554,3 +554,14 @@
         16. Handling API in react
             - fetch method
             - axios library
+
+                                    PROJECT CREATION USING REACT
+                       ---------------------------------------------------
+
+         1. Using vite create react Project : npm create vite@latest Project-name -- --template react
+         2. Remove unwanted codes from project (clear css files, app component file unwanted data)
+         3. install or link libraries used to create react project (ex:BOOTSTRAP)
+         4. Create page folder inside src folder and create components for pages
+         5. Create component folder inside src folder, components for part of pages
+         6. Set up path for components in pages folder
+         7. Start design pages
