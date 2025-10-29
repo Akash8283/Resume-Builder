@@ -9,7 +9,7 @@ import { FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
     <div style={{height:'300px',backgroundColor:'purple',color:'white'}} className='d-flex justify-content-center align-items-center p-5 flex-column'>
-        <h3>Contact US</h3>
+        <h1>Contact US</h1>
         <h5 className='fw-bolder'><MdAttachEmail /> resumebuilder@gmail.com</h5>
         <h5 className='fw-bolder'><FaPhoneSquareAlt /> 9987897856</h5>
         <h4>Connect with US</h4>

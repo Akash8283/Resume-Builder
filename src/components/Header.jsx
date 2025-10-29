@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { Tooltip } from '@mui/material';
 
 function Header() {
-    const projectInfo = "Resume Builder web application developed using React.js. It allows users to create, preview, and download professional resumes instantly. I implemented features like AI-powered text suggestions, PDF export, and user authentication using Clerk. The goal was to provide a fast, user-friendly way to generate modern, well-formatted resumes without needing design skills."
+    const projectInfo = "A Resume Builder App is an essential tool for job seekers looking to create polished and effective resumes. By combining ease of use with professional design options, these apps empower users to present their qualifications confidently and increase their chances of landing job interviews."
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{backgroundColor:"purple"}}>
@@ -26,7 +26,7 @@ function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to={'/'} className='text-light text-decoration-none fw-bold'>rBuilder</Link>
           </Typography>
-          <Tooltip title={projectInfo}><Button color="inherit">Home</Button></Tooltip>
+          <Tooltip title={projectInfo}><Button color="inherit">ABOUT US</Button></Tooltip>
         </Toolbar>
       </AppBar>
     </Box>
