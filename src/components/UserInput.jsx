@@ -35,6 +35,9 @@ function UserInput() {
     userSkills:[],
     summary:""
   })
+  //reference to skill input tag
+  const skillRef = React.useRef()
+
   console.log(resumeDetails);
   
 
@@ -79,6 +82,21 @@ function UserInput() {
   const handleReset = () => {
     setActiveStep(0);
   };
+  //skilSection
+  const addSkill = (skill)=>{
+     if (resumeDetails.userSkills.includes(skill)) {
+      alert("The given skill is already added, please add another!")
+      skillRef.current.value = ""
+     }
+     else{
+      setResumeDetails({...resumeDetails,userSkills:[...resumeDetails.userSkills,skill]})
+      //to clear add akill
+      skillRef.current.value = ""
+     }
+    }
+  const removeSkil = (skill)=>{
+    setResumeDetails({...resumeDetails,userSkills:resumeDetails.userSkills.filter(item=>item!=skill)})
+  }  
   const renderSteps = (stepCount) => {
     switch (stepCount) {
       case 0:
@@ -134,20 +152,27 @@ function UserInput() {
           <div>
             <h3>Skills</h3>
             <div className="d-flex align-items-center justify-content-between p-3">
-              <input placeholder='Add Skills' className='form-control' type="text" />
-              <Button className='ms-3' variant='text'>ADD</Button>
+              <input ref={skillRef} placeholder='Add Skills' className='form-control' type="text" />
+              <Button onClick={()=>addSkill(skillRef.current.value)} className='ms-3' variant='text'>ADD</Button>
             </div>
             <h4>Suggestions</h4>
             <div className='d-flex flex-wrap justify-content-between my-3'>
               {
                 skillSuggestionArray.map((item,index)=>(
-                  <Button key={index} variant='outlined' className='m-2'>{item}</Button>
+                  <Button onClick={()=>addSkill(item)} key={index} variant='outlined' className='m-2'>{item}</Button>
                 ))
               }
             </div>
             <h5>Added Skills :</h5>
             <div className='d-flex flex-wrap justify-content-between my-3'>
-              <Button variant='contained' className='m-1'>NODE JS <HiMiniXMark className='ms-2'/></Button>
+              {
+                resumeDetails.userSkills?.length>0?
+                  resumeDetails.userSkills?.map((skill,index)=>(
+                    <Button key={index} variant='contained' className='m-1'>{skill}<HiMiniXMark onClick={()=>removeSkil(skill)} className='ms-2'/></Button>
+                  ))
+                :
+                <p>No Skills Added</p>
+              }
             </div>
           </div>
         );
