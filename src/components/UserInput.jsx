@@ -11,30 +11,32 @@ import { HiMiniXMark } from "react-icons/hi2";
 
 const steps = ['Basic Informations', 'Contact Details', 'Education Details','Work Experience', 'Skills & Certifications', 'Review & Submit'];
 
-function UserInput() {
+function UserInput({resumeDetails,setResumeDetails}) {
   const skillSuggestionArray = ['NODE JS','MONGO DB','EXPRESS JS','REACT','API','MACHINE LEARNING','ARTIFICIAL INTELLIGENCE','ANGULAR','LEADERSHIP','COMMUNICATION','COACHING']
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-  const [resumeDetails,setResumeDetails] = React.useState({
-    username:"",
-    jobTitle:"",
-    location:"",
-    email:"",
-    mobile:"",
-    github:"",
-    linkedin:"",
-    portfolio:"",
-    course:"",
-    college:"",
-    university:"",
-    passoutYear:"",
-    jobType:"",
-    company:"",
-    clocation:"",
-    duration:"",
-    userSkills:[],
-    summary:""
-  })
+  //resume details - get from props
+  //create state for storing userinputs
+  // const [resumeDetails,setResumeDetails] = React.useState({
+  //   username:"",
+  //   jobTitle:"",
+  //   location:"",
+  //   email:"",
+  //   mobile:"",
+  //   github:"",
+  //   linkedin:"",
+  //   portfolio:"",
+  //   course:"",
+  //   college:"",
+  //   university:"",
+  //   passoutYear:"",
+  //   jobType:"",
+  //   company:"",
+  //   clocation:"",
+  //   duration:"",
+  //   userSkills:[],
+  //   summary:""
+  // })
   //reference to skill input tag
   const skillRef = React.useRef()
 
@@ -153,7 +155,7 @@ function UserInput() {
             <h3>Skills</h3>
             <div className="d-flex align-items-center justify-content-between p-3">
               <input ref={skillRef} placeholder='Add Skills' className='form-control' type="text" />
-              <Button onClick={()=>addSkill(skillRef.current.value)} className='ms-3' variant='text'>ADD</Button>
+              <Button onClick={()=>addSkill(skillRef.current.value.trim().toUpperCase())} className='ms-3' variant='text'>ADD</Button>
             </div>
             <h4>Suggestions</h4>
             <div className='d-flex flex-wrap justify-content-between my-3'>

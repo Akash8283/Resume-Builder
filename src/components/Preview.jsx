@@ -1,26 +1,32 @@
 import { Divider, Button } from '@mui/material'
 import React from 'react'
-function Preview() {
+function Preview({resumeDetails}) {
   return (
     <div style={{margin:'70px'}} className='shadow p-5 w-100 rounded text-center'>
-      <h3>Name</h3>
-      <h4>Job Title</h4>
-      <p><span className='mx-2 fw-bold'>Location</span>|<span className='mx-2 fw-bold'>Email</span>|<span className='mx-2 fw-bold'>Mobile</span></p>
+      <h3>{resumeDetails?.username}</h3>
+      <h4>{resumeDetails?.jobTitle}</h4>
+      <p><span className='mx-2 fw-bold'>{resumeDetails?.location}</span>|<span className='mx-2 fw-bold'>{resumeDetails?.email}</span>|<span className='mx-2 fw-bold'>{resumeDetails?.mobile}</span></p>
       <p className='my-3'>
-        <a href="" target='_blank'>GITHUB</a> |
-        <a href="" target='_blank'>LINKEDIN</a> |
-         <a href="" target='_blank'>PORTFOLIO</a>
+        <a href={resumeDetails?.github} target='_blank'>GITHUB</a> |
+        <a href={resumeDetails?.linkedin} target='_blank'>LINKEDIN</a> |
+         <a href={resumeDetails?.portfolio} target='_blank'>PORTFOLIO</a>
       </p>
       <Divider sx={{fontSize:'25px'}}>Summary</Divider>
-      <p style={{textAlign:'justify'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aperiam! Nostrum excepturi iure corporis, magni maiores quam incidunt sapiente laudantium, tenetur ad, quod cumque distinctio provident accusantium aut ea? A!</p>
+      <p style={{textAlign:'justify'}}>{resumeDetails?.summary}</p>
       <Divider sx={{fontSize:'25px',marginBottom:'10px'}}>Education</Divider>
-      <h5 className='mt-2'>Course Name</h5>
-      <p><span className='mx-2 '>College</span>|<span className='mx-2'>University</span>|<span className='mx-2'>Passout Year</span></p>
+      <h5 className='mt-2'>{resumeDetails?.course}</h5>
+      <p><span className='mx-2 '>{resumeDetails?.college}</span>|<span className='mx-2'>{resumeDetails?.university}</span>|<span className='mx-2'>{resumeDetails?.passoutYear}</span></p>
       <Divider sx={{fontSize:'25px',marginBottom:'10px'}}>Professional Experience</Divider>
-      <h5 className='mt-2'>Job / Internship</h5>
-      <p><span className='mx-2'>Company Name</span>|<span className='mx-2'>Company Location</span>|<span className='mx-2'>Duration</span></p>
+      <h5 className='mt-2'>{resumeDetails?.jobType}</h5>
+      <p><span className='mx-2'>{resumeDetails?.company}</span>|<span className='mx-2'>{resumeDetails?.clocation}</span>|<span className='mx-2'>{resumeDetails?.duration}</span></p>
       <Divider sx={{fontSize:'25px',marginBottom:'10px'}}>Skills</Divider>
-      <div className='d-flex flex-wrap justify-content-between'><Button className='m-1'variant='contained'>NODE JS</Button></div>
+      <div className='d-flex flex-wrap justify-content-between'>
+        {
+          resumeDetails.userSkills?.map((item,index)=>(
+            <Button key={index} className='m-1'variant='contained'>{item}</Button>
+          ))
+        }
+      </div>
     </div>
   )
 }
