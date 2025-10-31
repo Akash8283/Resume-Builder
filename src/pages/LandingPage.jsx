@@ -4,7 +4,7 @@ function LandingPage() {
   return (
     <div>
       {/* landing part */}
-      <section style={{width:'100%',height:'100vh',backgroundImage:"url('http://www.cpasitesolutions.com/cpa-websites/wp-content/uploads/2024/06/local-seo-for-bookeepers-1.png')",backgroundAttachment:'fixed',backgroundSize:'cover',backgroundPosition:'top'}} className='container-fluid row align-items-center'>
+      <section style={{width:'100%',height:'100vh',backgroundImage:"url(/public/home1.png)",backgroundAttachment:'fixed',backgroundSize:'cover',backgroundPosition:'top'}} className='container-fluid row align-items-center'>
       <div className="row">
         <div className="col-md-4"></div>
         <div className="col-md-4 shadow border py-5 rounded mt-5 text-center" style={{backgroundColor:'rgba(255,255,255,0.5)'}}>
@@ -31,12 +31,12 @@ function LandingPage() {
             <p>Effortlessly manage and track your job applications in an organized manner.</p>
           </div>
           <div className="col-md-6">
-            <img className='img-fluid' src="https://cdn-images.zety.com/images/zety/landings/builder/resume-builder-jumbotron-image@3x.png" alt="" />
+            <img className='img-fluid' src="/public/home2.png" alt="" />
           </div>
         </div>
       </section>
       {/* image */}
-      <section style={{height:'500px',width:'100%',backgroundImage:'url("https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg")',backgroundSize:'cover',backgroundPosition:'top',backgroundAttachment:'fixed'}}>
+      <section style={{height:'500px',width:'100%',backgroundImage:'url("/public/home3.jpeg")',backgroundSize:'cover',backgroundPosition:'top',backgroundAttachment:'fixed'}}>
 
       </section>
       {/* testimony */}
@@ -53,18 +53,18 @@ function LandingPage() {
           <div className="col-md-1"></div>
           <div className="col-md-5 col-12">
             <div className="row my-3">
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTefdAYZ6uy2rn4ODl9zSL1KwCAhiEPo9Xm-g&s" alt="" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="https://img.freepik.com/free-photo/designer-working-3d-model_23-2149371896.jpg?semt=ais_hybrid&w=740&q=80" alt="" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="https://img.freepik.com/free-photo/cheerful-guy-enjoying-outdoor-coffee-break_1262-20005.jpg?semt=ais_hybrid&w=740&q=80" alt="" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHa-KJ-5CHqlzCizT29X2IKzUKJJWcL0EqQ&s" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://thumbs.dreamstime.com/b/portrait-handsome-smiling-young-man-folded-arms-smiling-joyful-cheerful-men-crossed-hands-isolated-studio-shot-172869765.jpg" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://img.freepik.com/free-photo/portrait-smiling-young-man_1268-21877.jpg?semt=ais_hybrid&w=740&q=80" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://cdn.create.vista.com/api/media/small/20030237/stock-photo-cheerful-young-man-over-white" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://st.depositphotos.com/2309453/3449/i/450/depositphotos_34490345-stock-photo-confident-casual-unshaven-young-man.jpg" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://img.freepik.com/free-photo/african-american-man-working-laptop-man-with-beard-sitting-cafe-drink-tea_1157-48485.jpg" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://toppng.com/uploads/preview/stock-person-png-stock-photo-man-11563049686zqeb9zmqjd.png" alt="" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="https://img.freepik.com/free-photo/portrait-confident-young-businessman-with-his-arms-crossed_23-2148176206.jpg?semt=ais_hybrid&w=740&q=80" alt="" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user1.jpeg" alt="user1" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user2.jpeg" alt="user2" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user3.jpeg" alt="user3" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user4.jpeg" alt="user4" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user5.jpeg" alt="user5" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user6.jpeg" alt="user6" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user7.jpeg" alt="user7" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user8.jpeg" alt="user8" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user9.jpeg" alt="user9" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user10.jpeg" alt="user10" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user11.jpeg" alt="user11" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user12.jpeg" alt="user12" /></div>
             </div>
           </div>
         </div>

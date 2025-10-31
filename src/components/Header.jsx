@@ -21,7 +21,7 @@ function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <img width={'30px'} src="https://cdn-icons-png.flaticon.com/512/8347/8347432.png" alt="" />
+            <img width={'30px'} src="/public/logo.png" alt="" />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to={'/'} className='text-light text-decoration-none fw-bold'>rBuilder</Link>
