@@ -22,7 +22,7 @@ function Preview({resumeDetails}) {
       <Divider sx={{fontSize:'25px',marginBottom:'10px'}}>Skills</Divider>
       <div className='d-flex flex-wrap justify-content-between'>
         {
-          resumeDetails.userSkills?.map((item,index)=>(
+          resumeDetails?.userSkills?.map((item,index)=>(
             <Button key={index} className='m-1'variant='contained'>{item}</Button>
           ))
         }

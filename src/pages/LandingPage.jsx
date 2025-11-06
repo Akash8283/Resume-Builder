@@ -4,7 +4,7 @@ function LandingPage() {
   return (
     <div>
       {/* landing part */}
-      <section style={{width:'100%',height:'100vh',backgroundImage:"url(/public/home1.png)",backgroundAttachment:'fixed',backgroundSize:'cover',backgroundPosition:'top'}} className='container-fluid row align-items-center'>
+      <section style={{width:'100%',height:'100vh',backgroundImage:"url(/public/home1.jpg)",backgroundAttachment:'fixed',backgroundSize:'cover',backgroundPosition:'top'}} className='container-fluid row align-items-center'>
       <div className="row">
         <div className="col-md-4"></div>
         <div className="col-md-4 shadow border py-5 rounded mt-5 text-center" style={{backgroundColor:'rgba(255,255,255,0.5)'}}>

@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { HiMiniXMark } from "react-icons/hi2";
+import { addResumeApi } from '../services/AllApi';
+import { useNavigate } from 'react-router-dom';
 
 
 const steps = ['Basic Informations', 'Contact Details', 'Education Details','Work Experience', 'Skills & Certifications', 'Review & Submit'];
@@ -39,6 +41,8 @@ function UserInput({resumeDetails,setResumeDetails}) {
   // })
   //reference to skill input tag
   const skillRef = React.useRef()
+  //to Navigate
+  const navigate = useNavigate()
 
   console.log(resumeDetails);
   
@@ -155,7 +159,7 @@ function UserInput({resumeDetails,setResumeDetails}) {
             <h3>Skills</h3>
             <div className="d-flex align-items-center justify-content-between p-3">
               <input ref={skillRef} placeholder='Add Skills' className='form-control' type="text" />
-              <Button onClick={()=>addSkill(skillRef.current.value.trim().toUpperCase())} className='ms-3' variant='text'>ADD</Button>
+              <Button onClick={()=>addSkill(skillRef.current.value.trim().replace(/\s+/g, ' ').toUpperCase())} className='ms-3' variant='text'>ADD</Button>
             </div>
             <h4>Suggestions</h4>
             <div className='d-flex flex-wrap justify-content-between my-3'>
@@ -191,7 +195,29 @@ function UserInput({resumeDetails,setResumeDetails}) {
         return null;
     }
   };
-
+  const handleAddResume = async() =>{
+    const {username,jobTitle,location} = resumeDetails
+    if (!username || !jobTitle || !location) {
+      alert("Please fill the form completely")
+    }
+    else{
+      //api
+      console.log("Api called")
+      try{
+       const result = await addResumeApi(resumeDetails)
+       console.log(result)
+       if (result.status==201) {
+        alert("Resume added successfully!")
+        const {id} = result.data
+        //success redirect view page
+        navigate(`/resume/${id}/view`)
+        
+       }
+    }catch(error){
+      console.log(error)
+    }
+    }
+  }
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={activeStep}>
@@ -245,9 +271,9 @@ function UserInput({resumeDetails,setResumeDetails}) {
                 Skip
               </Button>
             )}
-            <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-            </Button>
+            {activeStep === steps.length - 1 ? <Button onClick={handleAddResume}>Finish</Button> : <Button onClick={handleNext}>Next</Button>}
+            
+            
           </Box>
         </React.Fragment>
       )}

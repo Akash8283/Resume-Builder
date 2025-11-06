@@ -554,6 +554,17 @@
         16. Handling API in react
             - fetch method
             - axios library
+        17. Data handling React
+            - State lifting using props, here state will lift to its common parent so that its child can access data via props
+     
+                            JSON SERVER
+              ----------------------------------------
+        1. Crete server folder
+        2. Create package.json file server folder, using command : npm init -y
+        3. create a json file to store data
+        4. Install json-server package to run json file
+        5. Run server using command: npx json-server json-file-name
+
 
                                     PROJECT CREATION USING REACT
                        ---------------------------------------------------
