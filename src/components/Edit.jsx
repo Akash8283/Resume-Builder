@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
 import { HiMiniXMark } from "react-icons/hi2";
-import { updateResumeApi } from '../services/AllApi';
+import { updateResumeApi } from '../services/allApi';
 
 const style = {
   position: 'absolute',
