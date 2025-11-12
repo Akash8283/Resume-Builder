@@ -1,5 +1,5 @@
-import commonApi from "./CommonApi"
-import serverUrl from "./ServerUrl"
+import commonApi from "./commonApi"
+import serverUrl from "./serverUrl"
 
 //resume add api - called by userInputs, when finish button is clicked
 export const addResumeApi = async (resume)=>{
