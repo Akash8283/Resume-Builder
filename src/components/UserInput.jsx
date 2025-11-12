@@ -94,6 +94,9 @@ function UserInput({resumeDetails,setResumeDetails}) {
       alert("The given skill is already added, please add another!")
       skillRef.current.value = ""
      }
+     else if(!skill.trim()){
+      alert("Please fill the Field")
+     }
      else{
       setResumeDetails({...resumeDetails,userSkills:[...resumeDetails.userSkills,skill]})
       //to clear add akill

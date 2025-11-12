@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
 import { HiMiniXMark } from "react-icons/hi2";
-
+import { updateResumeApi } from '../services/AllApi';
 
 const style = {
   position: 'absolute',
@@ -34,15 +34,39 @@ function Edit({resumeDetails,setResumeDetails}) {
       alert("The given skill is already added, please add another!")
       skillRef.current.value = ""
      }
+     else if(!skill.trim()){
+      alert("Please fill the Field")
+     }
      else{
       setResumeDetails({...resumeDetails,userSkills:[...resumeDetails.userSkills,skill]})
       //to clear add akill
       skillRef.current.value = ""
      }
     }
-  const removeSkil = (skill)=>{
+    const removeSkil = (skill)=>{
     setResumeDetails({...resumeDetails,userSkills:resumeDetails.userSkills.filter(item=>item!=skill)})
-  }  
+    }
+    const handleUpdateResume = async()=>{
+      const {id,username,jobTitle,location} = resumeDetails
+      if (!username && !jobTitle && !location) {
+        alert("Please fill the form Completely...")
+      }
+      else{
+        //api
+        console.log("Api call")
+        try{
+          const result = await updateResumeApi(id,resumeDetails)
+          console.log(result)
+          if (result.status==200) {
+            alert("Resume Updated Successfully!!!")
+            handleClose()
+          }
+        }catch(err){
+          console.log(err)
+        }
+      }
+    }
+
 
   return (
     <div>
@@ -126,7 +150,7 @@ function Edit({resumeDetails,setResumeDetails}) {
             </div>
             {/* button update */}
             <div>
-              <button className='btn btn-warning'>Update</button>
+              <button onClick={handleUpdateResume} className='btn btn-warning'>Update</button>
             </div>
           </Box>
         </Box>
