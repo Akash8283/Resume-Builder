@@ -31,12 +31,12 @@ function LandingPage() {
             <p>Effortlessly manage and track your job applications in an organized manner.</p>
           </div>
           <div className="col-md-6">
-            <img className='img-fluid' src="/public/home2.png" alt="" />
+            <img className='img-fluid' src="/home2.png" alt="" />
           </div>
         </div>
       </section>
       {/* image */}
-      <section style={{height:'500px',width:'100%',backgroundImage:'url("/public/home3.jpeg")',backgroundSize:'cover',backgroundPosition:'top',backgroundAttachment:'fixed'}}>
+      <section style={{height:'500px',width:'100%',backgroundImage:'url("/home3.jpeg")',backgroundSize:'cover',backgroundPosition:'top',backgroundAttachment:'fixed'}}>
 
       </section>
       {/* testimony */}
@@ -53,18 +53,18 @@ function LandingPage() {
           <div className="col-md-1"></div>
           <div className="col-md-5 col-12">
             <div className="row my-3">
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user1.jpeg" alt="user1" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user2.jpeg" alt="user2" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user3.jpeg" alt="user3" /></div>
-              <div className="col-3 "><img height={'150px'} width={'100%'} src="/public/user4.jpeg" alt="user4" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user5.jpeg" alt="user5" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user6.jpeg" alt="user6" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user7.jpeg" alt="user7" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user8.jpeg" alt="user8" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user9.jpeg" alt="user9" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user10.jpeg" alt="user10" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user11.jpeg" alt="user11" /></div>
-              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/public/user12.jpeg" alt="user12" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/user1.jpeg" alt="user1" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/user2.jpeg" alt="user2" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/user3.jpeg" alt="user3" /></div>
+              <div className="col-3 "><img height={'150px'} width={'100%'} src="/user4.jpeg" alt="user4" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user5.jpeg" alt="user5" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user6.jpeg" alt="user6" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user7.jpeg" alt="user7" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user8.jpeg" alt="user8" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user9.jpeg" alt="user9" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user10.jpeg" alt="user10" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user11.jpeg" alt="user11" /></div>
+              <div className="col-3 my-2"><img height={'150px'} width={'100%'} src="/user12.jpeg" alt="user12" /></div>
             </div>
           </div>
         </div>
