@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { HiMiniXMark } from "react-icons/hi2";
-import { addResumeApi } from '../services/allApi';
+import { addResumeApi } from '../services/allApii';
 import { useNavigate } from 'react-router-dom';
 
 

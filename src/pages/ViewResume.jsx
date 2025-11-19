@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Preview from '../components/Preview'
 import { Link, useParams } from 'react-router-dom'
-import { addHistoryApi,getResumeApi } from '../services/allApi'
+import { addHistoryApi,getResumeApi } from '../services/allApii'
 import { FaFileDownload } from "react-icons/fa";
 import { FaBackward } from "react-icons/fa";
 import { FaHistory } from "react-icons/fa";

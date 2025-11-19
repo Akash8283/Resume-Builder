@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 import { MdDelete } from "react-icons/md";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { getHistoryApi, removeHistoryApi } from '../services/allApi';
+import { getHistoryApi, removeHistoryApi } from '../services/allApii';
 
 function History() {
   const [allHistory,setAllHistory] = useState([])
